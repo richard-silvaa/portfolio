@@ -173,7 +173,7 @@ body {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 800;
     margin-bottom: 10px;
     background: linear-gradient(135deg, #fff, #00b4d8);
@@ -338,8 +338,8 @@ body {
 }
 
 .exp-panel-img img {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
 }
 
@@ -364,14 +364,24 @@ body {
     font-weight: 700;
     color: #1a1a2e;
     margin-bottom: 3px;
+    text-transform: uppercase;
 }
 
 .exp-panel-body h4 {
-    font-size: 0.82rem;
+    font-size: 1.1rem;
     color: #0f3460;
-    font-weight: 500;
-    margin-bottom: 12px;
+    font-weight: 700;
+    margin-bottom: 0;
     line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+.exp-panel-loc {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 400;
+    margin-bottom: 12px;
 }
 
 .exp-panel-desc {
@@ -417,8 +427,8 @@ body {
     }
 
     .exp-panel-img img {
-        width: 80px;
-        height: 80px;
+        width: 110px;
+        height: 110px;
     }
 
     .exp-panel-body {
