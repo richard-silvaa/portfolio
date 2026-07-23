@@ -519,11 +519,14 @@ body {
 }
 
 .cert-logo {
-    width: 36px;
-    height: 36px;
+    width: 72px;
+    height: 72px;
     object-fit: contain;
     flex-shrink: 0;
-    border-radius: 4px;
+    padding: 4px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fff;
 }
 
 .cert-body h3 {
