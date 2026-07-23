@@ -36,3 +36,45 @@ window.addEventListener('scroll', () => {
         navbar.style.background = 'rgba(26, 26, 46, 0.95)';
     }
 });
+
+// Experience Carousel
+const slides = document.querySelectorAll('.exp-slide');
+const prevBtn = document.getElementById('expPrev');
+const nextBtn = document.getElementById('expNext');
+const dotsContainer = document.getElementById('expDots');
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach(s => s.classList.remove('active'));
+    const target = Math.max(0, Math.min(index, slides.length - 1));
+    slides[target].classList.add('active');
+    currentSlide = target;
+    updateDots();
+}
+
+function createDots() {
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'exp-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => showSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+}
+
+function updateDots() {
+    document.querySelectorAll('.exp-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+    });
+}
+
+if (slides.length > 0) {
+    createDots();
+    showSlide(0);
+    nextBtn.addEventListener('click', () => {
+        showSlide(currentSlide + 1 < slides.length ? currentSlide + 1 : 0);
+    });
+    prevBtn.addEventListener('click', () => {
+        showSlide(currentSlide - 1 >= 0 ? currentSlide - 1 : slides.length - 1);
+    });
+}
