@@ -328,19 +328,22 @@ body {
 }
 
 .exp-panel-img {
-    background: linear-gradient(135deg, #f8f9fa, #fff);
-    padding: 30px 24px;
+    background: #fff;
+    padding: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #f0f0f0;
-    min-height: 160px;
+    min-height: 200px;
 }
 
 .exp-panel-img img {
-    width: 140px;
-    height: 140px;
+    width: 100%;
+    height: 100%;
+    max-width: 220px;
+    max-height: 160px;
     object-fit: contain;
+    mix-blend-mode: multiply;
 }
 
 .exp-panel-body {
@@ -378,9 +381,10 @@ body {
 
 .exp-panel-loc {
     display: block;
-    font-size: 0.75rem;
-    color: #888;
+    font-size: 0.7rem;
+    color: #999;
     font-weight: 400;
+    margin-top: 2px;
     margin-bottom: 12px;
 }
 
@@ -422,13 +426,13 @@ body {
     }
 
     .exp-panel-img {
-        min-height: 130px;
-        padding: 20px;
+        min-height: 160px;
+        padding: 12px;
     }
 
     .exp-panel-img img {
-        width: 110px;
-        height: 110px;
+        max-width: 160px;
+        max-height: 130px;
     }
 
     .exp-panel-body {
